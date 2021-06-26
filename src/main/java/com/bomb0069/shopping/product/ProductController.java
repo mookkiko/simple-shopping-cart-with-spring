@@ -28,7 +28,7 @@ public class ProductController {
         Optional<Product> optionalProduct = productRepository.findById(id);
         //if (optionalProduct.isEmpty())
             //throw new ProductNotFoundException(id);
-
+            //
         return createProductResponse(optionalProduct.get());
     }
 
