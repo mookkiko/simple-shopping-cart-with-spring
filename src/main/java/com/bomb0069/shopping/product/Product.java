@@ -4,7 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
-public class Product extends Audit<String> {
+public class Product /*extends Audit<String>*/{
     @Id
     private Integer id;
     private String productName;
@@ -30,11 +30,11 @@ public class Product extends Audit<String> {
                 + "productBrand: " + productBrand + "\n"
                 + "quantity: " + quantity + "\n"
                 + "productPrice: " + productPrice + "\n"
-                + "imageUrl: " + imageUrl + "\n"
-                + "created: " + created + "\n"
-                + "createdBy: " + created_By + "\n"
-                + "modified: " + modified + "\n"
-                + "modifiedBy: " + modified_By;
+                + "imageUrl: " + imageUrl + "\n";
+                //+ "created: " + created + "\n"
+                //+ "createdBy: " + created_By + "\n"
+                //+ "modified: " + modified + "\n"
+                //+ "modifiedBy: " + modified_By;
     }
 
     public Integer getId() {

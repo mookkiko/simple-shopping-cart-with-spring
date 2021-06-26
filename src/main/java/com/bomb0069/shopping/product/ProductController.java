@@ -26,8 +26,8 @@ public class ProductController {
     @GetMapping("/api/v1/product/{id}")
     public ProductResponse getProductById(@PathVariable Integer id) {
         Optional<Product> optionalProduct = productRepository.findById(id);
-        if (optionalProduct.isEmpty())
-            throw new ProductNotFoundException(id);
+        //if (optionalProduct.isEmpty())
+            //throw new ProductNotFoundException(id);
 
         return createProductResponse(optionalProduct.get());
     }
